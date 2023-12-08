@@ -8,7 +8,7 @@ package cpo_mini_projet_2_rego_gobart_sevry;
  *
  * @author regotiphaine
  */
-public class CPO_Mini_Projet_2_REGO_GOBART_SEVRY {
+public class La_chevauchee_fantastique {
 
     /**
      * @param args the command line arguments
@@ -16,5 +16,6 @@ public class CPO_Mini_Projet_2_REGO_GOBART_SEVRY {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-  
+}    
+
 

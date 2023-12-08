@@ -4,14 +4,14 @@
  */
 package cpo_mini_projet_2_rego_gobart_sevry;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author regotiphaine
  */
+
+import java.util.ArrayList;
 public class Grille {
-      
+    
     int Ligne;
     int Colonne;
     Cellule[][] grille;
@@ -100,5 +100,4 @@ public class Grille {
         }
         return liste_deplacements;
     }
-}
-
+} 
