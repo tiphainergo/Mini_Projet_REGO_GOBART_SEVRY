@@ -422,7 +422,7 @@ public class La_chevauchee_fantastique extends javax.swing.JFrame {
                 
              grille.add(cellulegraphique);
             }
-            grille.repaint();
+            grille.revalidate();
         }
     }
     
