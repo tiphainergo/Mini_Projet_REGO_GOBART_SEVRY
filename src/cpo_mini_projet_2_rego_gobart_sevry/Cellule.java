@@ -9,7 +9,8 @@ package cpo_mini_projet_2_rego_gobart_sevry;
  * @author sevry
  */
 public class Cellule {
-       Cavalier etatcellule = null;
+    
+    Cavalier etatcellule = null;
     boolean capturee = false;
     int X;
     int Y;
@@ -43,4 +44,3 @@ public class Cellule {
     }
     
 }
-

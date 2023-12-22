@@ -8,10 +8,12 @@ package cpo_mini_projet_2_rego_gobart_sevry;
  *
  * @author regotiphaine
  */
-public class Joueur {   
+public class Joueur {
+    
     String Nom;
     String Couleur;
     int level = 1;
+    int score = 100;
     Cavalier cavalier;
     
     public Joueur(String nom, String couleur){

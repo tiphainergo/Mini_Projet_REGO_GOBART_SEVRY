@@ -68,17 +68,16 @@ public class Grille {
         return true;
     }
     
-    public boolean perd(ArrayList<Cellule> liste_deplacements){
-        if (liste_deplacements.size() == 0 && gagne() == false){
-            return true;
-        }
-        return false;
-    }
-    
-    public void prend_nouvelle_cellule(Cavalier cavalier, int x, int y){
+    public boolean prend_nouvelle_cellule(Cavalier cavalier, int x, int y){
         if (! grille[x][y].capturee){
             grille[cavalier.X][cavalier.Y].partir();
             grille[x][y].capturer(cavalier);
+            return true;
+        }
+        else{
+            grille[cavalier.X][cavalier.Y].partir();
+            grille[x][y].capturer(cavalier);
+            return false;
         }
     }
     
@@ -94,10 +93,10 @@ public class Grille {
             int nouveau_x = x + deplacements_x[i];
             int nouveau_y = y + deplacements_y[i];
             
-            if ((nouveau_x >= 0 && nouveau_x < Ligne && nouveau_y >= 0 && nouveau_y < Colonne) && (grille[nouveau_x][nouveau_y].capturee() == false)) {
+            if (nouveau_x >= 0 && nouveau_x < Ligne && nouveau_y >= 0 && nouveau_y < Colonne) {
                     liste_deplacements.add(grille[nouveau_x][nouveau_y]);
             }
         }
         return liste_deplacements;
     }
-} 
+}
