@@ -26,44 +26,45 @@ import javax.swing.JButton;
 public class CelluleGraphique extends JButton{
     Cellule CelluleAssociee;
     ImageIcon imagecavalier;
-    
+   
     public CelluleGraphique(Cellule cellule){
         CelluleAssociee = cellule;
     }
-    
+   
     @Override
     public void paintComponent(Graphics G){
         super.paintComponent(G);
-        
+       
         boolean capturee = CelluleAssociee.capturee();
         Cavalier cavalier = CelluleAssociee.etatcellule;
         int x = getWidth() / 2;
         int y = getHeight() / 2;
-        
+       
         if (CelluleAssociee.deplacementpossible){
             G.setColor(Color.red);
             G.fillRect(x - 10, y - 10, 20, 20);
         }
-        
+       
         if (capturee){
             setBackground(Color.BLUE);
         }else if(CelluleAssociee.deplacementpossible == false){
             setBackground(Color.GRAY);
         }
-        
+       
         if (cavalier != null){
-            
-            try{
+           
+            try {
                 ImageIcon icon = new ImageIcon(System.getProperty("user.dir") + "\\src\\cpo_mini_projet_2_rego_gobart_sevry\\cavalier.png");
                 Image image = icon.getImage();
                 ImageObserver imageObserver = icon.getImageObserver();
                 int hauteur = (int) ((int) getWidth() * 0.3);
                 int largeur = (int) ((int) getHeight() * 0.3);
                 G.drawImage(image, x-(largeur/2), y-(hauteur/2), hauteur, largeur, imageObserver);
-                
+               
             } catch (Exception error) {
                 System.out.println(error);
-                Color couleur = Color.BLACK;
+            }
+            Color couleur = Color.BLACK;
                 switch(cavalier.Couleur){
                     case "Vert":
                         couleur = Color.GREEN;
@@ -78,8 +79,7 @@ public class CelluleGraphique extends JButton{
                         couleur = Color.YELLOW;
                         break;
                 }
-                setBackground(couleur);
-            }
+            setBackground(couleur);
         }
     }
 }
