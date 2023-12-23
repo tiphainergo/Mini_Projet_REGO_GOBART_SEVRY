@@ -66,11 +66,11 @@ public class CelluleGraphique extends JButton{
             }
             Color couleur = Color.BLACK;
                 switch(cavalier.Couleur){
-                    case "Vert":
-                        couleur = Color.GREEN;
-                        break;
                     case "Noir":
                         couleur = Color.BLACK;
+                        break;
+                    case "Vert":
+                        couleur = Color.GREEN;
                         break;
                     case "Blanc":
                         couleur = Color.WHITE;
