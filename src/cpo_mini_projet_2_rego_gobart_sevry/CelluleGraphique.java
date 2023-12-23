@@ -46,7 +46,7 @@ public class CelluleGraphique extends JButton{
         }
        
         if (capturee){
-            setBackground(Color.BLUE);
+            setBackground(Color.WHITE);
         }else if(CelluleAssociee.deplacementpossible == false){
             setBackground(Color.GRAY);
         }

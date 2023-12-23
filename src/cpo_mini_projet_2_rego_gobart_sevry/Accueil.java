@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author lucas
+ * @author sevry
  */
 public class Accueil extends javax.swing.JFrame {
 
